@@ -219,19 +219,63 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		60176ED92509A10900B0C4C6 /* Extensions */ = {
+		600651E925EACA6600D8ABF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6066041B2556063700E7716B /* DesignSystem */,
+				60EC6FA224F5FFF000F1A848 /* Network */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		600651EA25EACA8D00D8ABF5 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				60176EDF2509A1A400B0C4C6 /* ReusableView.swift */,
 				60176EDA2509A12600B0C4C6 /* UITableView+ReusableView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		600651EB25EACA9A00D8ABF5 /* Hex */ = {
+			isa = PBXGroup;
+			children = (
 				601CE80F251F81DD006BA4BB /* UIColor+Hex.swift */,
 			);
-			path = Extensions;
+			path = Hex;
+			sourceTree = "<group>";
+		};
+		600651EC25EACAB500D8ABF5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				60708DCD25561D2D00B10E86 /* DesignSystem */,
+				601BB4E024F6894D009D205F /* Network */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		600651ED25EACAC900D8ABF5 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				60176EE22509A20600B0C4C6 /* ReusableViewTests.swift */,
+				60176EE52509A33F00B0C4C6 /* UITableViewCell+ReusableViewTests.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		600651EE25EACAD500D8ABF5 /* Hex */ = {
+			isa = PBXGroup;
+			children = (
+				601CE817251F821D006BA4BB /* UIColor+HexTests.swift */,
+			);
+			path = Hex;
 			sourceTree = "<group>";
 		};
 		60176EDE2509A19C00B0C4C6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				60176EDF2509A1A400B0C4C6 /* ReusableView.swift */,
+				600651EB25EACA9A00D8ABF5 /* Hex */,
+				600651EA25EACA8D00D8ABF5 /* Reusable */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,18 +283,10 @@
 		60176EE12509A1F400B0C4C6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				60176EE22509A20600B0C4C6 /* ReusableViewTests.swift */,
+				600651EE25EACAD500D8ABF5 /* Hex */,
+				600651ED25EACAC900D8ABF5 /* Reusable */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		60176EE42509A32800B0C4C6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				60176EE52509A33F00B0C4C6 /* UITableViewCell+ReusableViewTests.swift */,
-				601CE817251F821D006BA4BB /* UIColor+HexTests.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		601BB4E024F6894D009D205F /* Network */ = {
@@ -436,11 +472,9 @@
 			isa = PBXGroup;
 			children = (
 				A9A863D7246CA5890087CB65 /* AppBuilder */,
-				6066041B2556063700E7716B /* DesignSystem */,
-				60176ED92509A10900B0C4C6 /* Extensions */,
 				60176EDE2509A19C00B0C4C6 /* Helpers */,
 				609169C724F601290074D1F0 /* Model */,
-				60EC6FA224F5FFF000F1A848 /* Network */,
+				600651E925EACA6600D8ABF5 /* Modules */,
 				609169C824F601340074D1F0 /* Repository */,
 				A9A863DA246CA5C80087CB65 /* Scenes */,
 				A9A863D8246CA5970087CB65 /* Supporting Files */,
@@ -451,11 +485,9 @@
 		A9A863BD246C9D2B0087CB65 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				60708DCD25561D2D00B10E86 /* DesignSystem */,
-				60176EE42509A32800B0C4C6 /* Extensions */,
 				60176EE12509A1F400B0C4C6 /* Helpers */,
 				605D1766250C71980001FDF9 /* Model */,
-				601BB4E024F6894D009D205F /* Network */,
+				600651EC25EACAB500D8ABF5 /* Modules */,
 				609169CB24F601830074D1F0 /* Repository */,
 				6005EE6324F5F5F50099B7EE /* Scenes */,
 				A9A863DD246CA64B0087CB65 /* Supporting Files */,
