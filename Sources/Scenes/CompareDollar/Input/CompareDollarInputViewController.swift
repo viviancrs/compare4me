@@ -2,6 +2,8 @@ import UIKit
 
 protocol CompareDollarInputViewControllerType: AnyObject {
     func show(viewModel: CompareDollarInputViewModel)
+    func showError(_ error: String)
+    func showResult(from data: CompareDollar)
 }
 
 class CompareDollarInputViewController: UIViewController {
@@ -24,13 +26,17 @@ class CompareDollarInputViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
 extension CompareDollarInputViewController: CompareDollarInputViewControllerType {
+    func showError(_ error: String) {
+        print(error) // TODO - mostrar mensagem de erro
+    }
+
+    func showResult(from data: CompareDollar) {
+        print(data) // TODO - navegar para a próxima tela
+    }
+
     func show(viewModel: CompareDollarInputViewModel) {
         DispatchQueue.main.async {
             self.mainView.show(viewModel: viewModel)
