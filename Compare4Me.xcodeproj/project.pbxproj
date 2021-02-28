@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		4EAA2423397CE8FD62B9F3E4 /* Pods_Compare4MeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB6F860AA79C74164166B79 /* Pods_Compare4MeTests.framework */; };
 		600651AE25EAA88C00D8ABF5 /* Compare4MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651A625EAA88100D8ABF5 /* Compare4MeUITests.swift */; };
-		600651C025EAB98000D8ABF5 /* CompareDollarInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651BF25EAB98000D8ABF5 /* CompareDollarInputViewController.swift */; };
-		600651CF25EAB9E100D8ABF5 /* CompareDollarInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651CE25EAB9E100D8ABF5 /* CompareDollarInputView.swift */; };
-		600651D725EABA1D00D8ABF5 /* CompareDollarInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651D625EABA1D00D8ABF5 /* CompareDollarInputViewModel.swift */; };
-		600651DC25EABCD400D8ABF5 /* CompareDollarInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651DB25EABCD400D8ABF5 /* CompareDollarInputPresenter.swift */; };
-		600651FE25EADA9D00D8ABF5 /* CompareDollarResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651FD25EADA9D00D8ABF5 /* CompareDollarResultPresenter.swift */; };
+		600651C025EAB98000D8ABF5 /* CompareUSDInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651BF25EAB98000D8ABF5 /* CompareUSDInputViewController.swift */; };
+		600651CF25EAB9E100D8ABF5 /* CompareUSDInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651CE25EAB9E100D8ABF5 /* CompareUSDInputView.swift */; };
+		600651D725EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651D625EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift */; };
+		600651DC25EABCD400D8ABF5 /* CompareUSDInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651DB25EABCD400D8ABF5 /* CompareUSDInputPresenter.swift */; };
+		600651FE25EADA9D00D8ABF5 /* CompareUSDResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600651FD25EADA9D00D8ABF5 /* CompareUSDResultPresenter.swift */; };
 		6006520E25EAE8A800D8ABF5 /* ExchangeRateRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6006520D25EAE8A800D8ABF5 /* ExchangeRateRepositoryTests.swift */; };
 		6006522625EAECA400D8ABF5 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6006521225EAE90700D8ABF5 /* ExchangeRate.swift */; };
 		60176EDB2509A12600B0C4C6 /* UITableView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60176EDA2509A12600B0C4C6 /* UITableView+ReusableView.swift */; };
@@ -55,10 +55,13 @@
 		60EC6FA424F6000B00F1A848 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC6FA324F6000B00F1A848 /* HTTPClient.swift */; };
 		60EC6FA624F6001300F1A848 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC6FA524F6001300F1A848 /* HTTPMethod.swift */; };
 		60EC6FA824F6001B00F1A848 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC6FA724F6001B00F1A848 /* RouterType.swift */; };
-		60EE580E25EB18C3004E8763 /* CompareDollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE580D25EB18C3004E8763 /* CompareDollar.swift */; };
-		60EE582025EB2D9D004E8763 /* CompareDollarInputPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE581F25EB2D9D004E8763 /* CompareDollarInputPresenterTests.swift */; };
-		60EE582525EB2DD7004E8763 /* CompareDollarInputViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE582425EB2DD7004E8763 /* CompareDollarInputViewControllerMock.swift */; };
+		60EE580E25EB18C3004E8763 /* CompareUSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE580D25EB18C3004E8763 /* CompareUSD.swift */; };
+		60EE582025EB2D9D004E8763 /* CompareUSDInputPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE581F25EB2D9D004E8763 /* CompareUSDInputPresenterTests.swift */; };
+		60EE582525EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE582425EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift */; };
 		60EE582A25EB2E17004E8763 /* ExchangeRateRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE582925EB2E17004E8763 /* ExchangeRateRepositoryMock.swift */; };
+		60EE583325EB44D9004E8763 /* CompareDollarResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE583225EB44D9004E8763 /* CompareDollarResultViewModel.swift */; };
+		60EE585625EB5110004E8763 /* CompareUSDResultPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE585525EB5110004E8763 /* CompareUSDResultPresenterTests.swift */; };
+		60EE585D25EB5143004E8763 /* CompareUSDResultViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EE585C25EB5143004E8763 /* CompareUSDResultViewControllerMock.swift */; };
 		A9A863A8246C9D270087CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A863A7246C9D270087CB65 /* AppDelegate.swift */; };
 		A9A863B1246C9D2B0087CB65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A863B0246C9D2B0087CB65 /* Images.xcassets */; };
 		A9A863B4246C9D2B0087CB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A863B2246C9D2B0087CB65 /* LaunchScreen.storyboard */; };
@@ -89,11 +92,11 @@
 		4449AEF21FBB13FC56BE688E /* Pods_Compare4Me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compare4Me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3C1625D957BB367AA05986 /* Pods-Compare4Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compare4Me.release.xcconfig"; path = "Target Support Files/Pods-Compare4Me/Pods-Compare4Me.release.xcconfig"; sourceTree = "<group>"; };
 		600651A625EAA88100D8ABF5 /* Compare4MeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compare4MeUITests.swift; sourceTree = "<group>"; };
-		600651BF25EAB98000D8ABF5 /* CompareDollarInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarInputViewController.swift; sourceTree = "<group>"; };
-		600651CE25EAB9E100D8ABF5 /* CompareDollarInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarInputView.swift; sourceTree = "<group>"; };
-		600651D625EABA1D00D8ABF5 /* CompareDollarInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarInputViewModel.swift; sourceTree = "<group>"; };
-		600651DB25EABCD400D8ABF5 /* CompareDollarInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarInputPresenter.swift; sourceTree = "<group>"; };
-		600651FD25EADA9D00D8ABF5 /* CompareDollarResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarResultPresenter.swift; sourceTree = "<group>"; };
+		600651BF25EAB98000D8ABF5 /* CompareUSDInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputViewController.swift; sourceTree = "<group>"; };
+		600651CE25EAB9E100D8ABF5 /* CompareUSDInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputView.swift; sourceTree = "<group>"; };
+		600651D625EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputViewModel.swift; sourceTree = "<group>"; };
+		600651DB25EABCD400D8ABF5 /* CompareUSDInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputPresenter.swift; sourceTree = "<group>"; };
+		600651FD25EADA9D00D8ABF5 /* CompareUSDResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDResultPresenter.swift; sourceTree = "<group>"; };
 		6006520D25EAE8A800D8ABF5 /* ExchangeRateRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateRepositoryTests.swift; sourceTree = "<group>"; };
 		6006521225EAE90700D8ABF5 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		60176EDA2509A12600B0C4C6 /* UITableView+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableView.swift"; sourceTree = "<group>"; };
@@ -135,10 +138,13 @@
 		60EC6FA324F6000B00F1A848 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		60EC6FA524F6001300F1A848 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		60EC6FA724F6001B00F1A848 /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
-		60EE580D25EB18C3004E8763 /* CompareDollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollar.swift; sourceTree = "<group>"; };
-		60EE581F25EB2D9D004E8763 /* CompareDollarInputPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarInputPresenterTests.swift; sourceTree = "<group>"; };
-		60EE582425EB2DD7004E8763 /* CompareDollarInputViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarInputViewControllerMock.swift; sourceTree = "<group>"; };
+		60EE580D25EB18C3004E8763 /* CompareUSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSD.swift; sourceTree = "<group>"; };
+		60EE581F25EB2D9D004E8763 /* CompareUSDInputPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputPresenterTests.swift; sourceTree = "<group>"; };
+		60EE582425EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputViewControllerMock.swift; sourceTree = "<group>"; };
 		60EE582925EB2E17004E8763 /* ExchangeRateRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateRepositoryMock.swift; sourceTree = "<group>"; };
+		60EE583225EB44D9004E8763 /* CompareDollarResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareDollarResultViewModel.swift; sourceTree = "<group>"; };
+		60EE585525EB5110004E8763 /* CompareUSDResultPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDResultPresenterTests.swift; sourceTree = "<group>"; };
+		60EE585C25EB5143004E8763 /* CompareUSDResultViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDResultViewControllerMock.swift; sourceTree = "<group>"; };
 		6E4B738718EEB1551221B84B /* Pods-Compare4Me-Compare4MeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compare4Me-Compare4MeUITests.release.xcconfig"; path = "Target Support Files/Pods-Compare4Me-Compare4MeUITests/Pods-Compare4Me-Compare4MeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6F860AA79C74164166B79 /* Pods_Compare4MeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compare4MeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A863A4246C9D270087CB65 /* Compare4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compare4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,21 +197,21 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		6006518425EAA77900D8ABF5 /* CompareDollar */ = {
+		6006518425EAA77900D8ABF5 /* CompareUSD */ = {
 			isa = PBXGroup;
 			children = (
-				60EE580D25EB18C3004E8763 /* CompareDollar.swift */,
+				60EE580D25EB18C3004E8763 /* CompareUSD.swift */,
 				6006518525EAA78600D8ABF5 /* Input */,
 				600651B825EAAE8E00D8ABF5 /* Result */,
 			);
-			path = CompareDollar;
+			path = CompareUSD;
 			sourceTree = "<group>";
 		};
 		6006518525EAA78600D8ABF5 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				600651DB25EABCD400D8ABF5 /* CompareDollarInputPresenter.swift */,
-				600651BF25EAB98000D8ABF5 /* CompareDollarInputViewController.swift */,
+				600651DB25EABCD400D8ABF5 /* CompareUSDInputPresenter.swift */,
+				600651BF25EAB98000D8ABF5 /* CompareUSDInputViewController.swift */,
 				600651CD25EAB9CE00D8ABF5 /* View */,
 			);
 			path = Input;
@@ -214,7 +220,8 @@
 		600651B825EAAE8E00D8ABF5 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				600651FD25EADA9D00D8ABF5 /* CompareDollarResultPresenter.swift */,
+				600651FD25EADA9D00D8ABF5 /* CompareUSDResultPresenter.swift */,
+				60EE583125EB44C0004E8763 /* ViewModel */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -222,8 +229,8 @@
 		600651CD25EAB9CE00D8ABF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				600651CE25EAB9E100D8ABF5 /* CompareDollarInputView.swift */,
-				600651D625EABA1D00D8ABF5 /* CompareDollarInputViewModel.swift */,
+				600651CE25EAB9E100D8ABF5 /* CompareUSDInputView.swift */,
+				600651D625EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,7 +317,8 @@
 		6006520325EADAB400D8ABF5 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				60EE581F25EB2D9D004E8763 /* CompareDollarInputPresenterTests.swift */,
+				60EE585A25EB5134004E8763 /* Mock */,
+				60EE581F25EB2D9D004E8763 /* CompareUSDInputPresenterTests.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -318,6 +326,8 @@
 		6006520425EADABA00D8ABF5 /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				60EE585B25EB513C004E8763 /* Mock */,
+				60EE585525EB5110004E8763 /* CompareUSDResultPresenterTests.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -494,8 +504,31 @@
 		60EE581825EB29F1004E8763 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				60EE582425EB2DD7004E8763 /* CompareDollarInputViewControllerMock.swift */,
 				60EE582925EB2E17004E8763 /* ExchangeRateRepositoryMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		60EE583125EB44C0004E8763 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				60EE583225EB44D9004E8763 /* CompareDollarResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		60EE585A25EB5134004E8763 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				60EE582425EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		60EE585B25EB513C004E8763 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				60EE585C25EB5143004E8763 /* CompareUSDResultViewControllerMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -581,7 +614,7 @@
 		A9A863DA246CA5C80087CB65 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6006518425EAA77900D8ABF5 /* CompareDollar */,
+				6006518425EAA77900D8ABF5 /* CompareUSD */,
 				A9A863DB246CA5D30087CB65 /* Launcher */,
 			);
 			path = Scenes;
@@ -883,22 +916,23 @@
 				60176EE02509A1A400B0C4C6 /* ReusableView.swift in Sources */,
 				601CE810251F81DD006BA4BB /* UIColor+Hex.swift in Sources */,
 				601BF08124F607B60070789D /* Route.swift in Sources */,
-				600651CF25EAB9E100D8ABF5 /* CompareDollarInputView.swift in Sources */,
-				600651D725EABA1D00D8ABF5 /* CompareDollarInputViewModel.swift in Sources */,
-				600651C025EAB98000D8ABF5 /* CompareDollarInputViewController.swift in Sources */,
+				600651CF25EAB9E100D8ABF5 /* CompareUSDInputView.swift in Sources */,
+				600651D725EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift in Sources */,
+				600651C025EAB98000D8ABF5 /* CompareUSDInputViewController.swift in Sources */,
 				606604272556073800E7716B /* Sizes.swift in Sources */,
 				60EC6FA124F5F77B00F1A848 /* ExchangeRateRepository.swift in Sources */,
-				600651DC25EABCD400D8ABF5 /* CompareDollarInputPresenter.swift in Sources */,
+				600651DC25EABCD400D8ABF5 /* CompareUSDInputPresenter.swift in Sources */,
 				60176EDB2509A12600B0C4C6 /* UITableView+ReusableView.swift in Sources */,
 				60EC6FA424F6000B00F1A848 /* HTTPClient.swift in Sources */,
 				603B146A24F8A63A00A6284D /* Colors.swift in Sources */,
 				609169C624F600CA0074D1F0 /* NetworkError.swift in Sources */,
 				60EC6FA624F6001300F1A848 /* HTTPMethod.swift in Sources */,
 				6006522625EAECA400D8ABF5 /* ExchangeRate.swift in Sources */,
+				60EE583325EB44D9004E8763 /* CompareDollarResultViewModel.swift in Sources */,
 				60EC6FA824F6001B00F1A848 /* RouterType.swift in Sources */,
 				A9A863A8246C9D270087CB65 /* AppDelegate.swift in Sources */,
-				600651FE25EADA9D00D8ABF5 /* CompareDollarResultPresenter.swift in Sources */,
-				60EE580E25EB18C3004E8763 /* CompareDollar.swift in Sources */,
+				600651FE25EADA9D00D8ABF5 /* CompareUSDResultPresenter.swift in Sources */,
+				60EE580E25EB18C3004E8763 /* CompareUSD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,17 +949,19 @@
 				60C8CD8F24F73B5000A76B82 /* URLSessionMock.swift in Sources */,
 				605D1765250C713C0001FDF9 /* Data+File.swift in Sources */,
 				60C8CD8A24F735E800A76B82 /* HTTPClientTests.swift in Sources */,
-				60EE582025EB2D9D004E8763 /* CompareDollarInputPresenterTests.swift in Sources */,
+				60EE582025EB2D9D004E8763 /* CompareUSDInputPresenterTests.swift in Sources */,
 				603B146F24F8A69500A6284D /* ColorsTests.swift in Sources */,
 				601CE81C251F827A006BA4BB /* UIColor+HexTests.swift in Sources */,
 				6032045324F74BED00E0ABA2 /* HTTPClientMock.swift in Sources */,
 				60C8CD8724F7342200A76B82 /* HTTPMethodTests.swift in Sources */,
 				601BB4DF24F687F9009D205F /* RouteTests.swift in Sources */,
 				605D1763250C6EA80001FDF9 /* FactoryProtocol.swift in Sources */,
-				60EE582525EB2DD7004E8763 /* CompareDollarInputViewControllerMock.swift in Sources */,
+				60EE585D25EB5143004E8763 /* CompareUSDResultViewControllerMock.swift in Sources */,
+				60EE582525EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift in Sources */,
 				604DD3AA250C69EC00C0AE61 /* ExchangeRateFactory.swift in Sources */,
 				60C8CD9524F7449A00A76B82 /* MockRouter.swift in Sources */,
 				6006520E25EAE8A800D8ABF5 /* ExchangeRateRepositoryTests.swift in Sources */,
+				60EE585625EB5110004E8763 /* CompareUSDResultPresenterTests.swift in Sources */,
 				60C8CD9724F744B000A76B82 /* MockError.swift in Sources */,
 				60EE582A25EB2E17004E8763 /* ExchangeRateRepositoryMock.swift in Sources */,
 				60176EE32509A20600B0C4C6 /* ReusableViewTests.swift in Sources */,

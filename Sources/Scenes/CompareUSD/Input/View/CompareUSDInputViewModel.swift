@@ -1,4 +1,4 @@
-struct CompareDollarInputViewModel: Equatable {
+struct CompareUSDInputViewModel: Equatable {
     private(set) var isButtonLoading: Bool = false
 
     func with(isButtonLoading: Bool) -> Self {

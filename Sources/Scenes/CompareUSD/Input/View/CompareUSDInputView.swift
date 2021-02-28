@@ -1,10 +1,10 @@
 import UIKit
 
-protocol CompareDollarInputViewType: UIView {
-    func show(viewModel: CompareDollarInputViewModel)
+protocol CompareUSDInputViewType: UIView {
+    func show(viewModel: CompareUSDInputViewModel)
 }
 
-class CompareDollarInputView: UIView {
+class CompareUSDInputView: UIView {
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -27,7 +27,7 @@ class CompareDollarInputView: UIView {
         return imageView
     }()
 
-    private lazy var dollarLabel: UILabel = {
+    private lazy var usdLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.Neutrals.neutral100
         label.font = .preferredFont(forTextStyle: .callout)
@@ -37,7 +37,7 @@ class CompareDollarInputView: UIView {
     }()
 
     // TODO - criar componente de moeda
-    private lazy var dollarTextField: UITextField = {
+    private lazy var usdTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Digite o valor"
         textField.borderStyle = .line
@@ -45,17 +45,17 @@ class CompareDollarInputView: UIView {
         return textField
     }()
 
-    private lazy var realLabel: UILabel = {
+    private lazy var brlLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.Neutrals.neutral100
         label.font = .preferredFont(forTextStyle: .callout)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Preço em real" // TODO - substituir por módulo de localização
+        label.text = "Preço em brl" // TODO - substituir por módulo de localização
         return label
     }()
 
     // TODO - criar componente de moeda
-    private lazy var realTextField: UITextField = {
+    private lazy var brlTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Digite o valor"
         textField.borderStyle = .line
@@ -83,12 +83,12 @@ class CompareDollarInputView: UIView {
 
 }
 
-extension CompareDollarInputView: CompareDollarInputViewType {
-    func show(viewModel: CompareDollarInputViewModel) {
+extension CompareUSDInputView: CompareUSDInputViewType {
+    func show(viewModel: CompareUSDInputViewModel) {
     }
 }
 
-extension CompareDollarInputView {
+extension CompareUSDInputView {
     private func setupUI() {
         backgroundColor = Colors.Neutrals.neutral0
         buildViewHierarchy()
@@ -100,11 +100,11 @@ extension CompareDollarInputView {
     private func buildViewHierarchy() {
         addSubview(logoImageView)
         addSubview(stackView)
-        stackView.addArrangedSubview(dollarLabel)
-        stackView.addArrangedSubview(dollarTextField)
-        stackView.setCustomSpacing(Spacing.standard, after: dollarTextField)
-        stackView.addArrangedSubview(realLabel)
-        stackView.addArrangedSubview(realTextField)
+        stackView.addArrangedSubview(usdLabel)
+        stackView.addArrangedSubview(usdTextField)
+        stackView.setCustomSpacing(Spacing.standard, after: usdTextField)
+        stackView.addArrangedSubview(brlLabel)
+        stackView.addArrangedSubview(brlTextField)
         stackView.addArrangedSubview(UIView())
         stackView.addArrangedSubview(compareButton)
     }
@@ -132,9 +132,9 @@ extension CompareDollarInputView {
 
     private func addConstraintsToTextFields() {
         NSLayoutConstraint.activate([
-            dollarTextField.heightAnchor.constraint(equalToConstant: 30),
+            usdTextField.heightAnchor.constraint(equalToConstant: 30),
 
-            realTextField.heightAnchor.constraint(equalToConstant: 30),
+            brlTextField.heightAnchor.constraint(equalToConstant: 30),
 
             compareButton.heightAnchor.constraint(equalToConstant: 30)
         ])
