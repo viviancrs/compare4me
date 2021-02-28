@@ -29,7 +29,7 @@ class HTTPClientTests: QuickSpec {
                 it("calls completion with decoded object") {
                     let object = DecodableModel(property: "value", propertySnakeCase: "value")
                     let expectedResult: Result<DecodableModel, NetworkError> = .success(object)
-                    let returnedResult = makeRequestAndGetResult(router: .valid)
+                    let returnedResult = makeRequestAndGetResult(route: .valid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
@@ -38,7 +38,7 @@ class HTTPClientTests: QuickSpec {
             context("when the request is invalid") {
                 it("calls completion with badRequest error") {
                     let expectedResult: Result<DecodableModel, NetworkError> = .failure(.badRequest)
-                    let returnedResult = makeRequestAndGetResult(router: .invalid)
+                    let returnedResult = makeRequestAndGetResult(route: .invalid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
@@ -46,7 +46,7 @@ class HTTPClientTests: QuickSpec {
 
             context("when the request is valid") {
                 beforeEach {
-                     _ = makeRequestAndGetResult(router: .valid)
+                     _ = makeRequestAndGetResult(route: .valid)
                 }
 
                 it("calls dataTask with expected scheme") {
@@ -77,7 +77,7 @@ class HTTPClientTests: QuickSpec {
 
                 it("calls completion with general error") {
                     let expectedResult: Result<DecodableModel, NetworkError> = .failure(.general)
-                    let returnedResult = makeRequestAndGetResult(router: .valid)
+                    let returnedResult = makeRequestAndGetResult(route: .valid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
@@ -90,7 +90,7 @@ class HTTPClientTests: QuickSpec {
 
                 it("calls completion with general error") {
                     let expectedResult: Result<DecodableModel, NetworkError> = .failure(.general)
-                    let returnedResult = makeRequestAndGetResult(router: .valid)
+                    let returnedResult = makeRequestAndGetResult(route: .valid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
@@ -103,7 +103,7 @@ class HTTPClientTests: QuickSpec {
 
                 it("calls completion with general error") {
                     let expectedResult: Result<DecodableModel, NetworkError> = .failure(.general)
-                    let returnedResult = makeRequestAndGetResult(router: .valid)
+                    let returnedResult = makeRequestAndGetResult(route: .valid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
@@ -117,7 +117,7 @@ class HTTPClientTests: QuickSpec {
 
                 it("calls completion with general error") {
                     let expectedResult: Result<DecodableModel, NetworkError> = .failure(.general)
-                    let returnedResult = makeRequestAndGetResult(router: .valid)
+                    let returnedResult = makeRequestAndGetResult(route: .valid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
@@ -131,16 +131,16 @@ class HTTPClientTests: QuickSpec {
 
                 it("calls completion with general error") {
                     let expectedResult: Result<DecodableModel, NetworkError> = .failure(.general)
-                    let returnedResult = makeRequestAndGetResult(router: .valid)
+                    let returnedResult = makeRequestAndGetResult(route: .valid)
 
                     expect(returnedResult).to(equal(expectedResult))
                 }
             }
         }
 
-        func makeRequestAndGetResult(router: MockRouter) -> Result<DecodableModel, NetworkError>? {
+        func makeRequestAndGetResult(route: MockRouter) -> Result<DecodableModel, NetworkError>? {
             var result: Result<DecodableModel, NetworkError>?
-            sut.request(router: router) {
+            sut.request(route: route) {
                 result = $0
             }
             return result

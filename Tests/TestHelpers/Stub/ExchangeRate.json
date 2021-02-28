@@ -1,0 +1,15 @@
+{
+   "USDT":{
+      "code":"USDT",
+      "codein":"BRL",
+      "name":"Dólar Comercial",
+      "high":"5.6089",
+      "low":"5.491",
+      "varBid":"0.068",
+      "pctChange":"1.23",
+      "bid":"5.5986",
+      "ask":"5.5991",
+      "timestamp":"1614374814",
+      "create_date":"2021-02-26 21:00:01"
+   }
+}

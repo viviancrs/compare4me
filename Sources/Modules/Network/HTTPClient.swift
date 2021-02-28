@@ -1,7 +1,7 @@
 import Foundation
 
 protocol HTTPClientType {
-    func request<T: Decodable, R: RouterType>(router: R, completion: @escaping (Result<T, NetworkError>) -> Void)
+    func request<T: Decodable, R: RouterType>(route: R, completion: @escaping (Result<T, NetworkError>) -> Void)
 }
 
 struct HTTPClient: HTTPClientType {
@@ -12,19 +12,19 @@ struct HTTPClient: HTTPClientType {
         self.session = session
     }
 
-    func request<T: Decodable, R: RouterType>(router: R, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func request<T: Decodable, R: RouterType>(route: R, completion: @escaping (Result<T, NetworkError>) -> Void) {
         var components = URLComponents()
-        components.scheme = router.scheme
-        components.host = router.host
-        components.path = router.path
-        components.queryItems = router.parameters
+        components.scheme = route.scheme
+        components.host = route.host
+        components.path = route.path
+        components.queryItems = route.parameters
 
         guard let url = components.url else {
             completion(.failure(.badRequest))
             return
         }
         var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = router.method.rawValue
+        urlRequest.httpMethod = route.method.rawValue
 
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in
             self.handleResponse(data: data, response: response, error: error, completion: completion)
