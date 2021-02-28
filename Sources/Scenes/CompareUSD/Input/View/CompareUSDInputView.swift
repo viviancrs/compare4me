@@ -32,14 +32,14 @@ class CompareUSDInputView: UIView {
         label.textColor = Colors.Neutrals.neutral100
         label.font = .preferredFont(forTextStyle: .callout)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Localizable.priceInTheUSA.localized
+        label.text = AppStrings.priceInTheUSA.localized
         return label
     }()
 
     // TODO - criar componente de moeda
     private lazy var usdTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = Localizable.typeTheValue.localized
+        textField.placeholder = AppStrings.typeTheValue.localized
         textField.borderStyle = .line
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -51,14 +51,14 @@ class CompareUSDInputView: UIView {
         label.textColor = Colors.Neutrals.neutral100
         label.font = .preferredFont(forTextStyle: .callout)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = Localizable.priceInBrazil.localized
+        label.text = AppStrings.priceInBrazil.localized
         return label
     }()
 
     // TODO - criar componente de moeda
     private lazy var brlTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = Localizable.typeTheValue.localized
+        textField.placeholder = AppStrings.typeTheValue.localized
         textField.borderStyle = .line
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +69,7 @@ class CompareUSDInputView: UIView {
     private lazy var compareButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .red
-        button.setTitle(Localizable.compare.localized, for: .normal)
+        button.setTitle(AppStrings.compare.localized, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -134,11 +134,11 @@ extension CompareUSDInputView {
 
     private func addConstraintsToTextFields() {
         NSLayoutConstraint.activate([
-            usdTextField.heightAnchor.constraint(equalToConstant: 30),
+            usdTextField.heightAnchor.constraint(equalToConstant: 24),
 
-            brlTextField.heightAnchor.constraint(equalToConstant: 30),
+            brlTextField.heightAnchor.constraint(equalToConstant: 24),
 
-            compareButton.heightAnchor.constraint(equalToConstant: 30)
+            compareButton.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 }

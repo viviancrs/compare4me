@@ -27,7 +27,7 @@ class CompareUSDInputPresenter {
             let data = CompareUSD(usdValue: usdValue, brlValue: brlValue, usdExchangeRate: usdExchangeRate)
             viewController?.showResult(from: data)
         case .failure:
-            viewController?.showError(Localizable.exchangeRateError.localized)
+            viewController?.showError(AppStrings.exchangeRateError.localized)
         }
     }
 }
