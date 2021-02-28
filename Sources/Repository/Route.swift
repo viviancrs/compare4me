@@ -8,7 +8,7 @@ enum Route: RouterType {
     }
 
     var host: String {
-        return "economia.awesomeapi.com.br"
+        return API.economia.value ?? ""
     }
 
     var path: String {

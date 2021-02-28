@@ -68,6 +68,7 @@
 		60FEF48B25EC23ED00714A76 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FEF48A25EC23ED00714A76 /* Coordinator.swift */; };
 		60FEF49925EC245F00714A76 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FEF49825EC245F00714A76 /* AppCoordinator.swift */; };
 		60FEF4A125EC270A00714A76 /* CompareUSDCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FEF4A025EC270A00714A76 /* CompareUSDCoordinator.swift */; };
+		60FEF4B725EC2A7300714A76 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FEF4B625EC2A7300714A76 /* Configuration.swift */; };
 		A9A863A8246C9D270087CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A863A7246C9D270087CB65 /* AppDelegate.swift */; };
 		A9A863B1246C9D2B0087CB65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A863B0246C9D2B0087CB65 /* Images.xcassets */; };
 		A9A863B4246C9D2B0087CB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A863B2246C9D2B0087CB65 /* LaunchScreen.storyboard */; };
@@ -159,6 +160,9 @@
 		60FEF48A25EC23ED00714A76 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		60FEF49825EC245F00714A76 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		60FEF4A025EC270A00714A76 /* CompareUSDCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDCoordinator.swift; sourceTree = "<group>"; };
+		60FEF4A925EC28B700714A76 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		60FEF4B225EC28D100714A76 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		60FEF4B625EC2A7300714A76 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		6E4B738718EEB1551221B84B /* Pods-Compare4Me-Compare4MeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compare4Me-Compare4MeUITests.release.xcconfig"; path = "Target Support Files/Pods-Compare4Me-Compare4MeUITests/Pods-Compare4Me-Compare4MeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6FB6F860AA79C74164166B79 /* Pods_Compare4MeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compare4MeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A863A4246C9D270087CB65 /* Compare4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compare4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -462,6 +466,7 @@
 		60708DE32556238800B10E86 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				60FEF4A825EC289800714A76 /* Config */,
 				60708DF9255623CD00B10E86 /* .swiftlint.yml */,
 				60708DFA255623CD00B10E86 /* .travis.yml */,
 				60708DFB255623CD00B10E86 /* Podfile */,
@@ -582,6 +587,16 @@
 				60FEF48A25EC23ED00714A76 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		60FEF4A825EC289800714A76 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				60FEF4B625EC2A7300714A76 /* Configuration.swift */,
+				60FEF4B225EC28D100714A76 /* Debug.xcconfig */,
+				60FEF4A925EC28B700714A76 /* Release.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		A9A8639B246C9D270087CB65 = {
@@ -974,6 +989,7 @@
 				60FEF4A125EC270A00714A76 /* CompareUSDCoordinator.swift in Sources */,
 				60FEF47A25EC176600714A76 /* Localizable.swift in Sources */,
 				600651CF25EAB9E100D8ABF5 /* CompareUSDInputView.swift in Sources */,
+				60FEF4B725EC2A7300714A76 /* Configuration.swift in Sources */,
 				600651D725EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift in Sources */,
 				600651C025EAB98000D8ABF5 /* CompareUSDInputViewController.swift in Sources */,
 				606604272556073800E7716B /* Sizes.swift in Sources */,
@@ -1076,6 +1092,7 @@
 /* Begin XCBuildConfiguration section */
 		A9A863CC246C9D2B0087CB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FEF4B225EC28D100714A76 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1137,6 +1154,7 @@
 		};
 		A9A863CD246C9D2B0087CB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FEF4A925EC28B700714A76 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
