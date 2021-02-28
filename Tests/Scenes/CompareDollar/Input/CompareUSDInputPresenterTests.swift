@@ -63,7 +63,7 @@ class CompareUSDInputPresenterTests: QuickSpec {
                 }
 
                 it("calls viewController show error") {
-                    expect(mockViewController.invokedShowError).to(equal("Erro ao obter cotação"))
+                    expect(mockViewController.invokedShowError).to(equal(Localizable.exchangeRateError.localized))
                     expect(mockViewController.$invokedShowError.count).to(equal(1))
                 }
             }

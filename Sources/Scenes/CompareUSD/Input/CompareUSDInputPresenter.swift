@@ -27,7 +27,7 @@ class CompareUSDInputPresenter {
             let data = CompareUSD(usdValue: usdValue, brlValue: brlValue, usdExchangeRate: usdExchangeRate)
             viewController?.showResult(from: data)
         case .failure:
-            viewController?.showError("Erro ao obter cotação") // TODO - substituir por API de localização
+            viewController?.showError(Localizable.exchangeRateError.localized)
         }
     }
 }

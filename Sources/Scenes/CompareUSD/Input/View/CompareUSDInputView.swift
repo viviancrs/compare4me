@@ -32,15 +32,16 @@ class CompareUSDInputView: UIView {
         label.textColor = Colors.Neutrals.neutral100
         label.font = .preferredFont(forTextStyle: .callout)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Preço em dólar" // TODO - substituir por módulo de localização
+        label.text = Localizable.priceInTheUSA.localized
         return label
     }()
 
     // TODO - criar componente de moeda
     private lazy var usdTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Digite o valor"
+        textField.placeholder = Localizable.typeTheValue.localized
         textField.borderStyle = .line
+        textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -50,15 +51,16 @@ class CompareUSDInputView: UIView {
         label.textColor = Colors.Neutrals.neutral100
         label.font = .preferredFont(forTextStyle: .callout)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Preço em brl" // TODO - substituir por módulo de localização
+        label.text = Localizable.priceInBrazil.localized
         return label
     }()
 
     // TODO - criar componente de moeda
     private lazy var brlTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Digite o valor"
+        textField.placeholder = Localizable.typeTheValue.localized
         textField.borderStyle = .line
+        textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -67,7 +69,7 @@ class CompareUSDInputView: UIView {
     private lazy var compareButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .red
-        button.setTitle("Comparar", for: .normal) // TODO - substituir por módulo de localização
+        button.setTitle(Localizable.compare.localized, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
