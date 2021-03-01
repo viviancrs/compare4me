@@ -1,5 +1,9 @@
 import UIKit
 
+protocol CompareUSDInputViewControllerDelegate: AnyObject {
+    func showResult(from data: CompareUSD)
+}
+
 protocol CompareUSDInputViewControllerType: AnyObject {
     func show(viewModel: CompareUSDInputViewModel)
     func showError(_ error: String)
@@ -7,6 +11,8 @@ protocol CompareUSDInputViewControllerType: AnyObject {
 }
 
 class CompareUSDInputViewController: UIViewController {
+    weak var delegate: CompareUSDInputViewControllerDelegate?
+
     private var presenter: CompareUSDInputPresenterType
     private let mainView: CompareUSDInputViewType
 
@@ -45,7 +51,9 @@ extension CompareUSDInputViewController: CompareUSDInputViewControllerType {
     }
 
     func showResult(from data: CompareUSD) {
-        print(data) // TODO - navegar para a próxima tela
+        DispatchQueue.main.async {
+            self.delegate?.showResult(from: data)
+        }
     }
 
     func show(viewModel: CompareUSDInputViewModel) {
