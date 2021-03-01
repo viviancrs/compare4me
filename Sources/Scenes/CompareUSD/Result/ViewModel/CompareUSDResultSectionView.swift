@@ -110,7 +110,7 @@ extension CompareUSDResultSectionView {
         let separatorView = createSeparatorView()
 
         let stackView = UIStackView()
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fillEqually
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
 

@@ -1,10 +1,6 @@
-protocol CompareUSDResultViewControllerType: AnyObject {
-    func show(viewModel: CompareUSDResultViewModel)
-}
-
 protocol CompareUSDResultPresenterType {
     var viewController: CompareUSDResultViewControllerType? { get set }
-    func viewWillAppear()
+    func viewDidLoad()
 }
 
 class CompareUSDResultPresenter {
@@ -57,7 +53,7 @@ class CompareUSDResultPresenter {
 }
 
 extension CompareUSDResultPresenter: CompareUSDResultPresenterType {
-    func viewWillAppear() {
+    func viewDidLoad() {
         let valuesInBrazil = calculateValuesInBrazil()
         let importValues = calculateImportValues()
 
