@@ -26,6 +26,17 @@ class CompareUSDInputViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindEvents()
+    }
+
+    private func bindEvents() {
+        mainView.didTapCompareBlock = { [weak self] usdValue, brlValue in
+            self?.presenter.compare(usdValue: usdValue, brlValue: brlValue)
+        }
+    }
 }
 
 extension CompareUSDInputViewController: CompareUSDInputViewControllerType {

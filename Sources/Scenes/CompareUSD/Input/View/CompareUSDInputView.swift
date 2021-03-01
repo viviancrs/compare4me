@@ -1,10 +1,14 @@
 import UIKit
 
 protocol CompareUSDInputViewType: UIView {
+    typealias BlockValues = (_ usdValue: Double, _ brlValue: Double) -> Void
+
+    var didTapCompareBlock: BlockValues? { get set }
     func show(viewModel: CompareUSDInputViewModel)
 }
 
 class CompareUSDInputView: UIView {
+    var didTapCompareBlock: BlockValues?
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -71,6 +75,7 @@ class CompareUSDInputView: UIView {
         button.backgroundColor = .red
         button.setTitle(AppStrings.compare.localized, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapCompare), for: .touchUpInside)
         return button
     }()
 
@@ -83,6 +88,11 @@ class CompareUSDInputView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    @objc private func didTapCompare() {
+        let usdValue = Double(usdTextField.text ?? "") ?? 0
+        let brlValue = Double(brlTextField.text ?? "") ?? 0
+        didTapCompareBlock?(usdValue, brlValue)
+    }
 }
 
 extension CompareUSDInputView: CompareUSDInputViewType {
