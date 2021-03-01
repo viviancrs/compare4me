@@ -26,22 +26,32 @@ class CompareUSDResultPresenter {
         self.data = data
     }
 
-    private func calculateValuesInBrazil() -> CompareUSDResultViewModel.ValuesInBrazil {
+    private func calculateValuesInBrazil() -> CompareUSDResultSectionViewModel {
         let usdByBRL = data.brlValue / data.usdValue
-        let valuesInBrazil = CompareUSDResultViewModel.ValuesInBrazil(totalInBRL: "\(data.brlValue)",
-                                                                      usdByBRL: "\(usdByBRL)")
+
+        var items = [CompareUSDResultSectionViewModel.Item]()
+        items.append(.init(title: AppStrings.total.localized, value: "\(data.brlValue)"))
+        items.append(.init(title: AppStrings.usdByBRL.localized, value: "\(usdByBRL)"))
+
+        let valuesInBrazil = CompareUSDResultSectionViewModel(title: AppStrings.priceInBrazil.localized,
+                                                              items: items)
         return valuesInBrazil
     }
 
-    private func calculateImportValues() -> CompareUSDResultViewModel.ImportValues {
+    private func calculateImportValues() -> CompareUSDResultSectionViewModel {
         let total = data.usdValue * tax * data.usdExchangeRate * iof
         let usdByBRL = total / data.usdValue
 
-        let importValues = CompareUSDResultViewModel.ImportValues(totalInBRL: "\(total)",
-                                                                  usdByBRL: "\(usdByBRL)",
-                                                                  usdExchangeRate: "\(data.usdExchangeRate)",
-                                                                  iof: "\(iof)",
-                                                                  tax: "\(tax)")
+        var items = [CompareUSDResultSectionViewModel.Item]()
+        items.append(.init(title: AppStrings.total.localized, value: "\(total)"))
+        items.append(.init(title: AppStrings.priceInTheUSA.localized, value: "\(data.usdValue)"))
+        items.append(.init(title: AppStrings.usdByBRL.localized, value: "\(usdByBRL)"))
+        items.append(.init(title: AppStrings.importTax.localized, value: "\(tax)"))
+        items.append(.init(title: AppStrings.iof.localized, value: "\(iof)"))
+
+        let importValues = CompareUSDResultSectionViewModel(title: AppStrings.importingPrice.localized,
+                                                            items: items)
+
         return importValues
     }
 }
