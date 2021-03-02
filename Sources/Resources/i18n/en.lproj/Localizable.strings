@@ -5,7 +5,7 @@
 "exchangeRateError" = "There was an error getting exchange rate";
 
 "total" = "Total";
-"usdByBRL" = "USD by BRL";
+"brlByUSD" = "Dollar Price";
 "importingPrice" = "Importing price";
 "exchangeRate" = "Exchange Rate";
 "importTax" = "Import Tax";

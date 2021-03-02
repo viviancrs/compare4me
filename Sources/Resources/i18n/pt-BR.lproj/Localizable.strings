@@ -5,9 +5,9 @@
 "exchangeRateError" = "Ocorreu um erro ao obter cotação";
 
 "total" = "Total";
-"usdByBRL" = "Dólar por real";
+"brlByUSD" = "Preço do dólar";
 "priceInBrazil" = "Preço no Brasil";
 "importingPrice" = "Preço importando";
-"exchangeRate" = "Cotação do dólar turismo";
+"exchangeRate" = "Dólar turismo";
 "importTax" = "Taxa de Importação";
 "iof" = "IOF";

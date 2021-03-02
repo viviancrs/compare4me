@@ -104,7 +104,7 @@ extension CompareUSDResultSectionView {
         ])
     }
 
-    private func addItem(title: String, value: String, isTheLast: Bool) {
+    private func addItem(title: String, value: String?, isTheLast: Bool) {
         let titleLabel = createTitleLabel(title)
         let valueLabel = createValueLabel(value)
         let separatorView = createSeparatorView()
@@ -140,7 +140,7 @@ extension CompareUSDResultSectionView {
         return label
     }
 
-    private func createValueLabel(_ value: String) -> UILabel {
+    private func createValueLabel(_ value: String?) -> UILabel {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .footnote)
         label.text = value

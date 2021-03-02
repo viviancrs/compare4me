@@ -6,6 +6,6 @@ struct CompareUSDResultSectionViewModel: Equatable {
 extension CompareUSDResultSectionViewModel {
     struct Item: Equatable {
         let title: String
-        let value: String
+        let value: String?
     }
 }

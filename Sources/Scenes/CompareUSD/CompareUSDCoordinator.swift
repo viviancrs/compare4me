@@ -11,7 +11,7 @@ class CompareUSDCoordinator: Coordinator {
         let vc = createInputViewController()
 
         navigationController?.setTransparentStyle()
-        navigationController?.pushViewController(vc, animated: true)
+        show(vc, with: .push, animated: true)
     }
 
     private func createInputViewController() -> CompareUSDInputViewController {
@@ -32,6 +32,6 @@ extension CompareUSDCoordinator: CompareUSDInputViewControllerDelegate {
         let vc = createResultViewController(data: data)
 
         navigationController?.setTransparentStyle()
-        navigationController?.pushViewController(vc, animated: true)
+        show(vc, with: .push, animated: true)
     }
 }
