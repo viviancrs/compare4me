@@ -1,0 +1,42 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+		setup_travis_ci
+		app_store_connect_api_key(key_id: "#{ENV["APPLE_STORE_CONNECT_KEY_ID"]}",
+                              issuer_id: "#{ENV["APPLE_STORE_CONNECT_ISSUER_ID"]}",
+                              key_content: "#{ENV["APPLE_STORE_CONNECT_CONTENT"]}",
+                              in_house: false)
+	end
+
+  desc "Run unit tests"
+  lane :tests do
+    run_tests(workspace: "Compare4Me.xcworkspace",
+              devices: ["iPhone 8"],
+              scheme: "Compare4MeTests")
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    increment_build_number
+    match(type: "appstore",)
+    build_app(workspace: "Compare4Me.xcworkspace", scheme: "Compare4Me")
+    upload_to_testflight
+  end
+end
