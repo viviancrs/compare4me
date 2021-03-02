@@ -69,11 +69,8 @@ class CompareUSDInputView: UIView {
         return textField
     }()
 
-    // TODO - criar componente de botão
-    private lazy var compareButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle(AppStrings.compare.localized, for: .normal)
+    private lazy var compareButton: Button = {
+        let button = Button(title: AppStrings.compare.localized)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didTapCompare), for: .touchUpInside)
         return button
@@ -97,6 +94,7 @@ class CompareUSDInputView: UIView {
 
 extension CompareUSDInputView: CompareUSDInputViewType {
     func show(viewModel: CompareUSDInputViewModel) {
+        compareButton.isLoading = viewModel.isButtonLoading
     }
 }
 
@@ -128,7 +126,7 @@ extension CompareUSDInputView {
             logoImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             logoImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
 
-            logoImageView.heightAnchor.constraint(equalToConstant: 128)
+            logoImageView.heightAnchor.constraint(equalToConstant: Sizes.hugeXX)
         ])
     }
 
@@ -148,7 +146,7 @@ extension CompareUSDInputView {
 
             brlTextField.heightAnchor.constraint(equalToConstant: 24),
 
-            compareButton.heightAnchor.constraint(equalToConstant: 48)
+            compareButton.heightAnchor.constraint(equalToConstant: Sizes.mediumX)
         ])
     }
 }

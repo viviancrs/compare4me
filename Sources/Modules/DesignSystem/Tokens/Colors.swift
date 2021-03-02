@@ -11,8 +11,7 @@ public struct Colors {
     }
 
     public struct BrandPrimary {
-        static let primary40 = UIColor(named: "primary40")
-        static let primary60 = UIColor(named: "primary60")
-        static let primary80 = UIColor(named: "primary80")
+        static let primary = UIColor(named: "primary")
+        static let onPrimary = UIColor(named: "onPrimary")
     }
 }

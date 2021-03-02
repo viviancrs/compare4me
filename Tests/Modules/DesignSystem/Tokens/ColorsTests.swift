@@ -6,17 +6,17 @@ class ColorsTests: QuickSpec {
 
     override func spec() {
         describe("#BrandPrimary") {
-            describe("#primary60") {
+            describe("#primary") {
                 it("has expected color") {
-                    let expectedColor = UIColor(hex: "#11BB77")
-                    expect(Colors.BrandPrimary.primary60?.cgColor).to(equal(expectedColor?.cgColor))
+                    let expectedColor = UIColor(hex: "#364F6B")
+                    expect(Colors.BrandPrimary.primary?.cgColor).to(equal(expectedColor?.cgColor))
                 }
             }
 
-            describe("#primary80") {
+            describe("#onPrimary") {
                 it("has expected color") {
-                    let expectedColor = UIColor(hex: "#0F7C50")
-                    expect(Colors.BrandPrimary.primary80?.cgColor).to(equal(expectedColor?.cgColor))
+                    let expectedColor = UIColor(hex: "#FFFFFF")
+                    expect(Colors.BrandPrimary.onPrimary?.cgColor).to(equal(expectedColor?.cgColor))
                 }
             }
         }
