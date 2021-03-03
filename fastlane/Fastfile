@@ -33,8 +33,26 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     increment_build_number
-    match(type: "appstore",)
+    install_certificates
     build_app(workspace: "Compare4Me.xcworkspace", scheme: "Compare4Me")
     upload_to_testflight
+  end
+
+  desc "Installs the certificates locally"
+  private_lane :install_certificates do
+    tmp_keychain = "temporary_keychain"
+    create_keychain(
+      name: tmp_keychain,
+      password: tmp_keychain,
+      default_keychain: true,
+      timeout: 3600,
+      unlock: true,
+    )
+    match(
+      type: "appstore",
+      keychain_name: tmp_keychain,
+      keychain_password: tmp_keychain,
+      readonly: true
+    )
   end
 end
