@@ -27,9 +27,7 @@ platform :ios do
 
   desc "Run unit tests"
   lane :tests do
-    run_tests(workspace: "Compare4Me.xcworkspace",
-              devices: ["iPhone 8"],
-              scheme: "Compare4MeTests")
+    run_tests(workspace: "Compare4Me.xcworkspace", devices: ["iPhone 8"])
   end
 
   desc "Push a new beta build to TestFlight"
