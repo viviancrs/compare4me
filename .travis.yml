@@ -4,7 +4,7 @@ install:
 - bundle install
 - pod install
 script:
-- fastlane tests
+#- fastlane tests
 - fastlane beta
 env:
   global:
