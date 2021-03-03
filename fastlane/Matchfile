@@ -1,3 +1,2 @@
 git_url("git@github.com:viviancrs/ios-certs.git")
 storage_mode("git")
-type("development")
