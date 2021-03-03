@@ -6,6 +6,15 @@ class NumericPercentTests: QuickSpec {
 
     override func spec() {
         describe("#percent") {
+            describe("when value is nil") {
+                it("returns nil") {
+                    let value: Double? = nil
+
+                    let returnedValue = value?.percent(locale: .ptBR)
+                    expect(returnedValue).to(beNil())
+                }
+            }
+
             describe("when the locale is ptBR") {
                 it("returns expected value") {
                     let expectedValue = "6%"

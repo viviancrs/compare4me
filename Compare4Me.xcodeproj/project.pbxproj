@@ -302,11 +302,8 @@
 		600651E925EACA6600D8ABF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				60FEF48925EC238700714A76 /* Coordinator */,
+				6095F9AC25EFDD80008B6F8E /* Commons */,
 				6066041B2556063700E7716B /* DesignSystem */,
-				607AE0BD25EDAB16002A7723 /* Formatter */,
-				60FEF47825EC175700714A76 /* Localizable */,
-				60EC6FA224F5FFF000F1A848 /* Network */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -331,9 +328,8 @@
 		600651EC25EACAB500D8ABF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6095F9AD25EFDD90008B6F8E /* Commons */,
 				60708DCD25561D2D00B10E86 /* DesignSystem */,
-				607AE0C625EDAE19002A7723 /* Formatter */,
-				601BB4E024F6894D009D205F /* Network */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -587,6 +583,26 @@
 				6006520D25EAE8A800D8ABF5 /* ExchangeRateRepositoryTests.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		6095F9AC25EFDD80008B6F8E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				60FEF48925EC238700714A76 /* Coordinator */,
+				607AE0BD25EDAB16002A7723 /* Formatter */,
+				60FEF47825EC175700714A76 /* Localizable */,
+				60EC6FA224F5FFF000F1A848 /* Network */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		6095F9AD25EFDD90008B6F8E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				607AE0C625EDAE19002A7723 /* Formatter */,
+				601BB4E024F6894D009D205F /* Network */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		60AEBA5425EDC3D8002060E7 /* Components */ = {
@@ -1357,9 +1373,10 @@
 			baseConfigurationReference = C7FB3693EB603112F5421711 /* Pods-Compare4Me.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = 62LFQB32S9;
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1368,7 +1385,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.vivianrosa.compare4me;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore br.com.vivianrosa.compare4me";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1380,9 +1397,10 @@
 			baseConfigurationReference = 5B3C1625D957BB367AA05986 /* Pods-Compare4Me.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = 62LFQB32S9;
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1391,7 +1409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.vivianrosa.compare4me;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore br.com.vivianrosa.compare4me";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";

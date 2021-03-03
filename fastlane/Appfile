@@ -1,8 +1,5 @@
-app_identifier("br.com.vivianrosa.compare4me") # The bundle identifier of your app
-apple_id("vivian.crs@gmail.com") # Your Apple email address
+app_identifier("br.com.vivianrosa.compare4me")
+apple_id("vivian.crs@gmail.com")
 
-itc_team_id("122762513") # App Store Connect Team ID
-team_id("62LFQB32S9") # Developer Portal Team ID
-
-# For more information about the Appfile, see:
-#     https://docs.fastlane.tools/advanced/#appfile
+itc_team_id("122762513")
+team_id("62LFQB32S9")

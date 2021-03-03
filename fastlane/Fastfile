@@ -4,12 +4,10 @@ platform :ios do
 
   before_all do
 		setup_travis
-    echo "olá"
-    echo ENV["MATCH_KEYCHAIN_NAME"]
-    echo ENV["MATCH_KEYCHAIN_PASSWORD"]
-		app_store_connect_api_key(key_id: ENV["APPLE_STORE_CONNECT_KEY_ID"],
-                              issuer_id: ENV["APPLE_STORE_CONNECT_ISSUER_ID"],
-                              key_content: ENV["APPLE_STORE_CONNECT_CONTENT"],
+
+		app_store_connect_api_key(key_id: "#{ENV["APPLE_STORE_CONNECT_KEY_ID"]}",
+                              issuer_id: "#{ENV["APPLE_STORE_CONNECT_ISSUER_ID"]}",
+                              key_content: "#{ENV["APPLE_STORE_CONNECT_CONTENT"]}",
                               in_house: false)
 	end
 
@@ -20,29 +18,28 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    install_certificates
+    # install_certificates
     increment_build_number
-    build_app(workspace: "Compare4Me.xcworkspace", scheme: "Compare4Me")
+    match(type: "appstore")
+    build_app(workspace: "Compare4Me.xcworkspace", 
+              scheme: "Compare4Me",
+              export_method: "app-store",
+              export_options: {
+                method: "app-store",
+                provisioningProfiles: { 
+                  APP_ID => PROVISIONING_PROFILE
+                }
+              })
     upload_to_testflight
   end
 
   desc "Installs the certificates locally"
   private_lane :install_certificates do
-    keychain_name = ENV["MATCH_KEYCHAIN_NAME"]
-    keychain_password = ENV["MATCH_KEYCHAIN_PASSWORD"]
-
-    create_keychain(
-      name: keychain_name,
-      password: keychain_password,
-      default_keychain: true,
-      timeout: 3600,
-      unlock: true,
-    )
     match(
       type: "appstore",
-      keychain_name: keychain_name,
-      keychain_password: keychain_password,
-      readonly: true
+      keychain_name: "fastlane_tmp_keychain",
+      keychain_password: "",
+      readonly: false
     )
   end
 end
