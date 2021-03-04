@@ -18,7 +18,7 @@ class CompareUSDInputView: UIView {
                                                left: Spacing.small,
                                                bottom: Spacing.small,
                                                right: Spacing.small)
-        stackView.spacing = Spacing.tiny
+        stackView.spacing = Spacing.standard
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -31,39 +31,23 @@ class CompareUSDInputView: UIView {
         return imageView
     }()
 
-    private lazy var usdLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = Colors.Neutrals.neutral100
-        label.font = .preferredFont(forTextStyle: .callout)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = AppStrings.priceInTheUSA.localized
-        return label
-    }()
-
     // TODO - criar componente de moeda
-    private lazy var usdTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = AppStrings.typeTheValue.localized
-        textField.borderStyle = .line
+    private lazy var usdTextField: FloatingLabelTextField = {
+        let textField = FloatingLabelTextField()
+        textField.title = AppStrings.priceInTheUSA.localized
+        textField.placeholder = AppStrings.priceInTheUSA.localized
+        textField.isTitleHiddenWhenTextIsEmpty = true
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
 
-    private lazy var brlLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = Colors.Neutrals.neutral100
-        label.font = .preferredFont(forTextStyle: .callout)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = AppStrings.priceInBrazil.localized
-        return label
-    }()
-
     // TODO - criar componente de moeda
-    private lazy var brlTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = AppStrings.typeTheValue.localized
-        textField.borderStyle = .line
+    private lazy var brlTextField: FloatingLabelTextField = {
+        let textField = FloatingLabelTextField()
+        textField.title = AppStrings.priceInBrazil.localized
+        textField.placeholder = AppStrings.priceInBrazil.localized
+        textField.isTitleHiddenWhenTextIsEmpty = true
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -100,7 +84,7 @@ extension CompareUSDInputView: CompareUSDInputViewType {
 
 extension CompareUSDInputView {
     private func setupUI() {
-        backgroundColor = Colors.Neutrals.neutral0
+        backgroundColor = Colors.Surface.background
         buildViewHierarchy()
         addConstraintsToLogoImageView()
         addConstraintsToStackView()
@@ -110,10 +94,8 @@ extension CompareUSDInputView {
     private func buildViewHierarchy() {
         addSubview(logoImageView)
         addSubview(stackView)
-        stackView.addArrangedSubview(usdLabel)
         stackView.addArrangedSubview(usdTextField)
         stackView.setCustomSpacing(Spacing.standard, after: usdTextField)
-        stackView.addArrangedSubview(brlLabel)
         stackView.addArrangedSubview(brlTextField)
         stackView.addArrangedSubview(UIView())
         stackView.addArrangedSubview(compareButton)
@@ -142,10 +124,6 @@ extension CompareUSDInputView {
 
     private func addConstraintsToTextFields() {
         NSLayoutConstraint.activate([
-            usdTextField.heightAnchor.constraint(equalToConstant: 24),
-
-            brlTextField.heightAnchor.constraint(equalToConstant: 24),
-
             compareButton.heightAnchor.constraint(equalToConstant: Sizes.mediumX)
         ])
     }

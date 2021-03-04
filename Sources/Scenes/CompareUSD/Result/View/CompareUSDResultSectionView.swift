@@ -8,7 +8,7 @@ class CompareUSDResultSectionView: UIView {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.Neutrals.neutral100
+        label.textColor = Colors.Surface.onBackground
         label.font = .preferredFont(forTextStyle: .body)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -16,14 +16,14 @@ class CompareUSDResultSectionView: UIView {
 
     private lazy var separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.Neutrals.neutral20
+        view.backgroundColor = Colors.Content.lowEmphasis
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     private lazy var highlightSeparatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.Neutrals.neutral90
+        view.backgroundColor = Colors.Content.highEmphasis
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -59,7 +59,7 @@ extension CompareUSDResultSectionView: CompareUSDResultSectionViewType {
 
 extension CompareUSDResultSectionView {
     private func setupUI() {
-        backgroundColor = Colors.Neutrals.neutral0
+        backgroundColor = Colors.Surface.background
         buildViewHierarchy()
         addConstraintsToTitle()
         addConstraintsToSeparators()
@@ -123,7 +123,7 @@ extension CompareUSDResultSectionView {
 
     private func createSeparatorView() -> UIView {
         let view = UIView()
-        view.backgroundColor = Colors.Neutrals.neutral20
+        view.backgroundColor = Colors.Content.lowEmphasis
         NSLayoutConstraint.activate([
             view.heightAnchor.constraint(equalToConstant: 1)
         ])
@@ -135,7 +135,7 @@ extension CompareUSDResultSectionView {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .footnote)
         label.text = title
-        label.textColor = Colors.Neutrals.neutral100
+        label.textColor = Colors.Surface.onSurface
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
@@ -144,7 +144,7 @@ extension CompareUSDResultSectionView {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .footnote)
         label.text = value
-        label.textColor = Colors.Neutrals.neutral90
+        label.textColor = Colors.Content.mediumEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }

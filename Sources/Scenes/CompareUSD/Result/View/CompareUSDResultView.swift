@@ -58,7 +58,7 @@ extension CompareUSDResultView: CompareUSDResultViewType {
 
 extension CompareUSDResultView {
     private func setupUI() {
-        backgroundColor = Colors.Neutrals.neutral0
+        backgroundColor = Colors.Surface.background
         buildViewHierarchy()
         addConstraintsToScrollView()
         addConstraintsToStackView()

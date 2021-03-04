@@ -5,7 +5,7 @@ extension UINavigationController {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true
-        navigationBar.tintColor = Colors.Neutrals.neutral90
+        navigationBar.tintColor = Colors.Surface.onBackground
         navigationBar.topItem?.title = ""
     }
 }

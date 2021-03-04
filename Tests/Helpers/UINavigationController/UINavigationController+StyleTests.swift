@@ -17,7 +17,7 @@ class UINavigationControllerStyleTests: QuickSpec {
                 sut.setTransparentStyle()
 
                 expect(sut.navigationBar.isTranslucent).to(beTrue())
-                expect(sut.navigationBar.tintColor).to(equal(Colors.Neutrals.neutral90))
+                expect(sut.navigationBar.tintColor).to(equal(Colors.Surface.onBackground))
                 expect(sut.navigationBar.topItem?.title).to(equal(""))
             }
         }

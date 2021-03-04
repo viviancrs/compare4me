@@ -12,7 +12,7 @@ class Button: UIButton {
 
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.color = Colors.BrandPrimary.onPrimary
+        activityIndicator.color = Colors.Primary.onPrimary
         activityIndicator.hidesWhenStopped = true
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         return activityIndicator
@@ -29,14 +29,14 @@ class Button: UIButton {
     }
 
     private func setupUI() {
-        backgroundColor = Colors.BrandPrimary.primary
+        backgroundColor = Colors.Primary.primary
         layer.cornerRadius = 10
         updateTitleColor()
         buildActivityIndicator()
     }
 
     private func updateTitleColor() {
-        let color = isLoading ? UIColor.clear : Colors.BrandPrimary.onPrimary
+        let color = isLoading ? UIColor.clear : Colors.Primary.onPrimary
         setTitleColor(color, for: .normal)
     }
 
