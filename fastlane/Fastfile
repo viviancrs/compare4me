@@ -20,18 +20,11 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
+    set_keys
     # install_certificates
     increment_build_number
     match(type: "appstore")
-    build_app(workspace: "Compare4Me.xcworkspace", 
-              scheme: "Compare4Me",
-              export_method: "app-store",
-              export_options: {
-                method: "app-store",
-                provisioningProfiles: { 
-                  APP_ID => PROVISIONING_PROFILE
-                }
-              })
+    build_app_store
     upload_to_testflight
   end
 
@@ -44,4 +37,25 @@ platform :ios do
       readonly: false
     )
   end
+
+  desc "Installs the certificates locally"
+  private_lane :set_keys do
+		app_store_connect_api_key(key_id: "#{ENV["APPLE_STORE_CONNECT_KEY_ID"]}",
+                              issuer_id: "#{ENV["APPLE_STORE_CONNECT_ISSUER_ID"]}",
+                              key_content: "#{ENV["APPLE_STORE_CONNECT_CONTENT"]}",
+                              in_house: false)
+	end
+
+  desc "Build app for app store"
+  private_lane :build_app_store do
+		build_app(workspace: "Compare4Me.xcworkspace", 
+              scheme: "Compare4Me",
+              export_method: "app-store",
+              export_options: {
+                method: "app-store",
+                provisioningProfiles: { 
+                  APP_ID => PROVISIONING_PROFILE
+                }
+              })
+	end
 end
