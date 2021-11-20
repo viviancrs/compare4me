@@ -22,7 +22,7 @@ class ColorsFeedbackTests: QuickSpec {
 
             describe("#warning") {
                 it("has expected color") {
-                    let expectedColor = UIColor(hex: "#569A32")
+                    let expectedColor = UIColor(hex: "#FCC433")
                     expect(Colors.Feedback.warning?.cgColor).to(equal(expectedColor?.cgColor))
                 }
             }
