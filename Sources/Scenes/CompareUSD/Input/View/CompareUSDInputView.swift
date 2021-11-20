@@ -8,7 +8,18 @@ protocol CompareUSDInputViewType: UIView {
 }
 
 class CompareUSDInputView: UIView {
+    var notificationCenter: NotificationCenterType
     var didTapCompareBlock: BlockValues?
+
+    private var bottomConstraint: NSLayoutConstraint?
+
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -60,8 +71,10 @@ class CompareUSDInputView: UIView {
         return button
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(notificationCenter: NotificationCenterType = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
+        super.init(frame: .zero)
+        addKeyboardObservers()
         setupUI()
     }
 
@@ -82,18 +95,27 @@ extension CompareUSDInputView: CompareUSDInputViewType {
     }
 }
 
+extension CompareUSDInputView: Keyboardable {
+    func didUpdateKeyboard(height: CGFloat) {
+        bottomConstraint?.constant = -height
+        layoutIfNeeded()
+    }
+}
+
 extension CompareUSDInputView {
     private func setupUI() {
         backgroundColor = Colors.Surface.background
         buildViewHierarchy()
+        addConstraintsToScrollView()
         addConstraintsToLogoImageView()
         addConstraintsToStackView()
-        addConstraintsToTextFields()
+        addConstraintsToCompareButton()
     }
 
     private func buildViewHierarchy() {
-        addSubview(logoImageView)
-        addSubview(stackView)
+        addSubview(scrollView)
+        scrollView.addSubview(stackView)
+        stackView.addArrangedSubview(logoImageView)
         stackView.addArrangedSubview(usdTextField)
         stackView.setCustomSpacing(Spacing.standard, after: usdTextField)
         stackView.addArrangedSubview(brlTextField)
@@ -101,28 +123,40 @@ extension CompareUSDInputView {
         stackView.addArrangedSubview(compareButton)
     }
 
+    private func addConstraintsToScrollView() {
+        let bottomConstraint = scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            bottomConstraint,
+            scrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
+
+        self.bottomConstraint = bottomConstraint
+    }
+
+    private func addConstraintsToStackView() {
+        let heightConstraint = stackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+        heightConstraint.priority = .defaultHigh
+
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            heightConstraint
+        ])
+    }
+
     private func addConstraintsToLogoImageView() {
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-
-            logoImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            logoImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-
             logoImageView.heightAnchor.constraint(equalToConstant: Sizes.hugeXX)
         ])
     }
 
-    private func addConstraintsToStackView() {
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor),
-            stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-
-            stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor)
-        ])
-    }
-
-    private func addConstraintsToTextFields() {
+    private func addConstraintsToCompareButton() {
         NSLayoutConstraint.activate([
             compareButton.heightAnchor.constraint(equalToConstant: Sizes.mediumX)
         ])
