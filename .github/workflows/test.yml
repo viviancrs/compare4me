@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Bundle
+      run: bundle install
+    - name: Dependencies
+      run: bundle exec pod install
+    - name: Test
+      run: bundle exec fastlane test
