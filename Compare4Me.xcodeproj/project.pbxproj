@@ -89,6 +89,9 @@
 		60C8CD9224F73BE000A76B82 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8CD9024F73BDE00A76B82 /* URLSessionDataTaskMock.swift */; };
 		60C8CD9524F7449A00A76B82 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8CD9324F7448700A76B82 /* MockRouter.swift */; };
 		60C8CD9724F744B000A76B82 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8CD9624F744B000A76B82 /* MockError.swift */; };
+		60D5B8DF274A0F4F00B6449F /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D5B8DE274A0F4F00B6449F /* String+Range.swift */; };
+		60D5B8E8274A109D00B6449F /* String+RangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D5B8E3274A106B00B6449F /* String+RangeTests.swift */; };
+		60D5B8F3274A122A00B6449F /* NSMutableAttributedString+BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D5B8F2274A122A00B6449F /* NSMutableAttributedString+BuilderTests.swift */; };
 		60EC6FA124F5F77B00F1A848 /* ExchangeRateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC6FA024F5F77B00F1A848 /* ExchangeRateRepository.swift */; };
 		60EC6FA424F6000B00F1A848 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC6FA324F6000B00F1A848 /* HTTPClient.swift */; };
 		60EC6FA624F6001300F1A848 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC6FA524F6001300F1A848 /* HTTPMethod.swift */; };
@@ -217,6 +220,9 @@
 		60C8CD9024F73BDE00A76B82 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		60C8CD9324F7448700A76B82 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
 		60C8CD9624F744B000A76B82 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		60D5B8DE274A0F4F00B6449F /* String+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Range.swift"; sourceTree = "<group>"; };
+		60D5B8E3274A106B00B6449F /* String+RangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RangeTests.swift"; sourceTree = "<group>"; };
+		60D5B8F2274A122A00B6449F /* NSMutableAttributedString+BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BuilderTests.swift"; sourceTree = "<group>"; };
 		60EC6FA024F5F77B00F1A848 /* ExchangeRateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateRepository.swift; sourceTree = "<group>"; };
 		60EC6FA324F6000B00F1A848 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		60EC6FA524F6001300F1A848 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -593,9 +599,9 @@
 		607AE0BD25EDAB16002A7723 /* Formatter */ = {
 			isa = PBXGroup;
 			children = (
+				605AC3C425F06B8F0040760C /* NSMutableAttributedString+Builder.swift */,
 				607AE0BE25EDAB30002A7723 /* Numeric+Currency.swift */,
 				607AE0F925EDB938002A7723 /* Numeric+Percent.swift */,
-				605AC3C425F06B8F0040760C /* NSMutableAttributedString+Builder.swift */,
 			);
 			path = Formatter;
 			sourceTree = "<group>";
@@ -604,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				607AE0DD25EDAF8A002A7723 /* LocaleIdentifierTests.swift */,
+				60D5B8F2274A122A00B6449F /* NSMutableAttributedString+BuilderTests.swift */,
 				607AE0C725EDAE32002A7723 /* Numeric+CurrencyTests.swift */,
 				607AE0F125EDB925002A7723 /* Numeric+PercentTests.swift */,
 			);
@@ -643,6 +650,7 @@
 				60FEF48A25EC23ED00714A76 /* Coordinator.swift */,
 				605AACCB25F1B9A700A13614 /* Keyboardable.swift */,
 				605AACD325F1BE8500A13614 /* NotificationCenterType.swift */,
+				60D5B8DE274A0F4F00B6449F /* String+Range.swift */,
 				607AE0BD25EDAB16002A7723 /* Formatter */,
 				60FEF47825EC175700714A76 /* Localizable */,
 				60EC6FA224F5FFF000F1A848 /* Network */,
@@ -653,9 +661,10 @@
 		6095F9AD25EFDD90008B6F8E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				6068C0772749E4B300B44078 /* Mocks */,
 				6068C06F2749E47900B44078 /* KeyboardableTests.swift */,
+				60D5B8E3274A106B00B6449F /* String+RangeTests.swift */,
 				607AE0C625EDAE19002A7723 /* Formatter */,
+				6068C0772749E4B300B44078 /* Mocks */,
 				601BB4E024F6894D009D205F /* Network */,
 			);
 			path = Commons;
@@ -1197,6 +1206,7 @@
 				600651CF25EAB9E100D8ABF5 /* CompareUSDInputView.swift in Sources */,
 				60FEF4B725EC2A7300714A76 /* Configuration.swift in Sources */,
 				600651D725EABA1D00D8ABF5 /* CompareUSDInputViewModel.swift in Sources */,
+				60D5B8DF274A0F4F00B6449F /* String+Range.swift in Sources */,
 				600651C025EAB98000D8ABF5 /* CompareUSDInputViewController.swift in Sources */,
 				606604272556073800E7716B /* Sizes.swift in Sources */,
 				60EC6FA124F5F77B00F1A848 /* ExchangeRateRepository.swift in Sources */,
@@ -1274,6 +1284,8 @@
 				60176EE32509A20600B0C4C6 /* ReusableViewTests.swift in Sources */,
 				603B147124F8A69C00A6284D /* ImagesTests.swift in Sources */,
 				60176EE62509A33F00B0C4C6 /* UITableViewCell+ReusableViewTests.swift in Sources */,
+				60D5B8F3274A122A00B6449F /* NSMutableAttributedString+BuilderTests.swift in Sources */,
+				60D5B8E8274A109D00B6449F /* String+RangeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
