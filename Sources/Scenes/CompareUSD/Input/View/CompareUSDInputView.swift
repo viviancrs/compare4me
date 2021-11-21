@@ -43,9 +43,10 @@ class CompareUSDInputView: UIView {
     }()
 
     // TODO - criar componente de moeda
-    private lazy var usdTextField: FloatingLabelTextField = {
+    lazy var usdTextField: FloatingLabelTextField = {
         let textField = FloatingLabelTextField()
         textField.title = AppStrings.priceInTheUSA.localized
+        textField.error = AppStrings.requiredField.localized
         textField.placeholder = AppStrings.priceInTheUSA.localized
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -53,16 +54,17 @@ class CompareUSDInputView: UIView {
     }()
 
     // TODO - criar componente de moeda
-    private lazy var brlTextField: FloatingLabelTextField = {
+    lazy var brlTextField: FloatingLabelTextField = {
         let textField = FloatingLabelTextField()
         textField.title = AppStrings.priceInBrazil.localized
+        textField.error = AppStrings.requiredField.localized
         textField.placeholder = AppStrings.priceInBrazil.localized
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
 
-    private lazy var compareButton: Button = {
+    lazy var compareButton: Button = {
         let button = Button(title: AppStrings.compare.localized)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didTapCompare), for: .touchUpInside)
@@ -94,6 +96,8 @@ class CompareUSDInputView: UIView {
 extension CompareUSDInputView: CompareUSDInputViewType {
     func show(viewModel: CompareUSDInputViewModel) {
         compareButton.isLoading = viewModel.isButtonLoading
+        brlTextField.hasError = viewModel.brlValueHasError
+        usdTextField.hasError = viewModel.usdValueHasError
     }
 }
 

@@ -55,6 +55,7 @@
 		6068C0702749E47900B44078 /* KeyboardableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068C06F2749E47900B44078 /* KeyboardableTests.swift */; };
 		6068C0792749E4C700B44078 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068C0782749E4C700B44078 /* NotificationCenterMock.swift */; };
 		6068C0872749EAB600B44078 /* FloatingLabelTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068C0862749EAB600B44078 /* FloatingLabelTextFieldTests.swift */; };
+		6068C094274A03D600B44078 /* CompareUSDInputViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068C093274A03D600B44078 /* CompareUSDInputViewTests.swift */; };
 		60708DCF25561DFD00B10E86 /* SizesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60708DCE25561DFD00B10E86 /* SizesTests.swift */; };
 		60708DDA2556200E00B10E86 /* SpacingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60708DD92556200E00B10E86 /* SpacingTests.swift */; };
 		60708DFC255623CD00B10E86 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 60708DF9255623CD00B10E86 /* .swiftlint.yml */; };
@@ -182,6 +183,7 @@
 		6068C06F2749E47900B44078 /* KeyboardableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardableTests.swift; sourceTree = "<group>"; };
 		6068C0782749E4C700B44078 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 		6068C0862749EAB600B44078 /* FloatingLabelTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextFieldTests.swift; sourceTree = "<group>"; };
+		6068C093274A03D600B44078 /* CompareUSDInputViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputViewTests.swift; sourceTree = "<group>"; };
 		60708DCE25561DFD00B10E86 /* SizesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesTests.swift; sourceTree = "<group>"; };
 		60708DD92556200E00B10E86 /* SpacingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTests.swift; sourceTree = "<group>"; };
 		60708DF9255623CD00B10E86 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
@@ -413,6 +415,7 @@
 			children = (
 				60EE581F25EB2D9D004E8763 /* CompareUSDInputPresenterTests.swift */,
 				6078B7E025EC698F002D23D1 /* CompareUSDInputViewControllerTests.swift */,
+				6068C093274A03D600B44078 /* CompareUSDInputViewTests.swift */,
 				60EE585A25EB5134004E8763 /* Mock */,
 			);
 			path = Input;
@@ -1225,6 +1228,7 @@
 			files = (
 				6078B7E125EC698F002D23D1 /* CompareUSDInputViewControllerTests.swift in Sources */,
 				605D1768250C71AA0001FDF9 /* ExchangeRateTests.swift in Sources */,
+				6068C094274A03D600B44078 /* CompareUSDInputViewTests.swift in Sources */,
 				605D1761250C6E880001FDF9 /* MockHelper.swift in Sources */,
 				6032045024F7493600E0ABA2 /* Spy.swift in Sources */,
 				6078B7EB25EC69DA002D23D1 /* CompareUSDInputPresenterMock.swift in Sources */,

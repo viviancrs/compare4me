@@ -2,6 +2,7 @@
 "priceInTheUSA" = "Price in the USA";
 "priceInBrazil" = "Price in Brazil";
 "typeTheValue" = "Type the value";
+"requiredField" = "Required field";
 "exchangeRateError" = "There was an error getting exchange rate";
 
 "total" = "Total";

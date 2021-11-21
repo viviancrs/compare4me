@@ -2,6 +2,7 @@
 "priceInTheUSA" = "Preço nos EUA";
 "priceInBrazil" = "Preço no Brasil";
 "typeTheValue" = "Digite o valor";
+"requiredField" = "Campo obrigatório";
 "exchangeRateError" = "Ocorreu um erro ao obter cotação";
 
 "total" = "Total";
