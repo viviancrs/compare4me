@@ -92,7 +92,7 @@ class FloatingLabelTextField: UITextField {
     }
 
     override func resignFirstResponder() -> Bool {
-        let result = super.becomeFirstResponder()
+        let result = super.resignFirstResponder()
         hasFocus = false
         return result
     }
