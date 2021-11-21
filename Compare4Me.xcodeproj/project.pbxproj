@@ -52,6 +52,8 @@
 		6068C02E2749801B00B44078 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 6068C02D2749801B00B44078 /* Gemfile */; };
 		6068C03A274980E400B44078 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6068C038274980E400B44078 /* .gitignore */; };
 		6068C03B274980E400B44078 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6068C039274980E400B44078 /* README.md */; };
+		6068C0702749E47900B44078 /* KeyboardableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068C06F2749E47900B44078 /* KeyboardableTests.swift */; };
+		6068C0792749E4C700B44078 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068C0782749E4C700B44078 /* NotificationCenterMock.swift */; };
 		60708DCF25561DFD00B10E86 /* SizesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60708DCE25561DFD00B10E86 /* SizesTests.swift */; };
 		60708DDA2556200E00B10E86 /* SpacingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60708DD92556200E00B10E86 /* SpacingTests.swift */; };
 		60708DFC255623CD00B10E86 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 60708DF9255623CD00B10E86 /* .swiftlint.yml */; };
@@ -176,6 +178,8 @@
 		6068C02D2749801B00B44078 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = SOURCE_ROOT; };
 		6068C038274980E400B44078 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		6068C039274980E400B44078 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		6068C06F2749E47900B44078 /* KeyboardableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardableTests.swift; sourceTree = "<group>"; };
+		6068C0782749E4C700B44078 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 		60708DCE25561DFD00B10E86 /* SizesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesTests.swift; sourceTree = "<group>"; };
 		60708DD92556200E00B10E86 /* SpacingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTests.swift; sourceTree = "<group>"; };
 		60708DF9255623CD00B10E86 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
@@ -540,6 +544,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		6068C0772749E4B300B44078 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6068C0782749E4C700B44078 /* NotificationCenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		60708DCD25561D2D00B10E86 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +648,8 @@
 		6095F9AD25EFDD90008B6F8E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				6068C0772749E4B300B44078 /* Mocks */,
+				6068C06F2749E47900B44078 /* KeyboardableTests.swift */,
 				607AE0C625EDAE19002A7723 /* Formatter */,
 				601BB4E024F6894D009D205F /* Network */,
 			);
@@ -1213,6 +1227,7 @@
 				6078B7EB25EC69DA002D23D1 /* CompareUSDInputPresenterMock.swift in Sources */,
 				60C8CD9224F73BE000A76B82 /* URLSessionDataTaskMock.swift in Sources */,
 				6078B7E625EC69D2002D23D1 /* CompareUSDInputViewMock.swift in Sources */,
+				6068C0702749E47900B44078 /* KeyboardableTests.swift in Sources */,
 				60708DDA2556200E00B10E86 /* SpacingTests.swift in Sources */,
 				605AC3E625F1063E0040760C /* ColorsSurfaceTests.swift in Sources */,
 				60708DCF25561DFD00B10E86 /* SizesTests.swift in Sources */,
@@ -1235,6 +1250,7 @@
 				605AC3EB25F1064A0040760C /* ColorsFeedbackTests.swift in Sources */,
 				60EE585D25EB5143004E8763 /* CompareUSDResultViewControllerMock.swift in Sources */,
 				60EE582525EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift in Sources */,
+				6068C0792749E4C700B44078 /* NotificationCenterMock.swift in Sources */,
 				6078B89325EC99E3002D23D1 /* UINavigationController+StyleTests.swift in Sources */,
 				604DD3AA250C69EC00C0AE61 /* ExchangeRateFactory.swift in Sources */,
 				60AEBA6425EDC481002060E7 /* ButtonTests.swift in Sources */,
