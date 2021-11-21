@@ -5,12 +5,6 @@ class FloatingLabelTextField: UITextField {
     private let errorHeight = Sizes.standard
     private let lineHeight: CGFloat = 1
 
-    var isTitleHiddenWhenTextIsEmpty: Bool = false {
-        didSet {
-            updateStyle()
-        }
-    }
-
     var title: String = "" {
         didSet {
             titleLabel.text = title.uppercased()
@@ -26,6 +20,12 @@ class FloatingLabelTextField: UITextField {
     }
 
     var hasError: Bool = false {
+        didSet {
+            updateStyle()
+        }
+    }
+
+    override var text: String? {
         didSet {
             updateStyle()
         }
@@ -149,8 +149,7 @@ extension FloatingLabelTextField {
 
     private func updateVisibility() {
         let isTextEmpty = text?.isEmpty ?? true
-        titleLabel.isHidden = isTitleHiddenWhenTextIsEmpty && isTextEmpty
-
+        titleLabel.isHidden = isTextEmpty
         errorLabel.isHidden = !hasError
     }
 

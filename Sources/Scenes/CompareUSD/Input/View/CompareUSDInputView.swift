@@ -47,7 +47,6 @@ class CompareUSDInputView: UIView {
         let textField = FloatingLabelTextField()
         textField.title = AppStrings.priceInTheUSA.localized
         textField.placeholder = AppStrings.priceInTheUSA.localized
-        textField.isTitleHiddenWhenTextIsEmpty = true
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -58,7 +57,6 @@ class CompareUSDInputView: UIView {
         let textField = FloatingLabelTextField()
         textField.title = AppStrings.priceInBrazil.localized
         textField.placeholder = AppStrings.priceInBrazil.localized
-        textField.isTitleHiddenWhenTextIsEmpty = true
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
