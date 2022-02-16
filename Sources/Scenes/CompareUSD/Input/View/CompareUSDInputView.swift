@@ -50,6 +50,7 @@ class CompareUSDInputView: UIView {
         textField.placeholder = AppStrings.priceInTheUSA.localized
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .no
         return textField
     }()
 
@@ -61,6 +62,7 @@ class CompareUSDInputView: UIView {
         textField.placeholder = AppStrings.priceInBrazil.localized
         textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .no
         return textField
     }()
 

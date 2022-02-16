@@ -2,7 +2,6 @@ default_platform(:ios)
 APP_ID = "br.com.vivianrosa.compare4me"
 PROVISIONING_PROFILE = "match AppStore " + APP_ID
 
-
 platform :ios do
   desc "Run unit tests"
   lane :tests do

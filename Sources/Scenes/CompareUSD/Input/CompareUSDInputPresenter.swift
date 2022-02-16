@@ -30,10 +30,26 @@ class CompareUSDInputPresenter {
             viewController?.showError(AppStrings.exchangeRateError.localized)
         }
     }
+
+    private func isValid(usdValue: Double, brlValue: Double) -> Bool {
+        guard usdValue > 0 else {
+            self.viewModel = viewModel.with(usdValueHasError: true)
+            return false
+        }
+
+        guard brlValue > 0 else {
+            self.viewModel = viewModel.with(brlValueHasError: true)
+            return false
+        }
+
+        return true
+    }
 }
 
 extension CompareUSDInputPresenter: CompareUSDInputPresenterType {
     func compare(usdValue: Double, brlValue: Double) {
+        guard isValid(usdValue: usdValue, brlValue: brlValue) else { return }
+
         self.viewModel = viewModel.with(isButtonLoading: true)
         repository.fetch { [weak self] result in
             self?.handleFetch(usdValue: usdValue, brlValue: brlValue, result: result)

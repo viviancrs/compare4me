@@ -32,6 +32,38 @@ class CompareUSDInputPresenterTests: QuickSpec {
                 expect(mockViewController.$invokedShow.count).to(equal(1))
             }
 
+            context("when USD value is zero") {
+                beforeEach {
+                    let model = ExchangeRate(bid: "3.0")
+                    mockRepository.mockResult = Result.success(model)
+
+                    sut.compare(usdValue: 0, brlValue: 2.0)
+                }
+
+                it("calls viewController show view model with usd value has error") {
+                    let expectedViewModel = CompareUSDInputViewModel(usdValueHasError: true)
+
+                    expect(mockViewController.invokedShow).to(equal(expectedViewModel))
+                    expect(mockViewController.$invokedShow.count).to(equal(1))
+                }
+            }
+
+            context("when BRL value is zero") {
+                beforeEach {
+                    let model = ExchangeRate(bid: "3.0")
+                    mockRepository.mockResult = Result.success(model)
+
+                    sut.compare(usdValue: 1.0, brlValue: 0.0)
+                }
+
+                it("calls viewController show view model with brl value has error") {
+                    let expectedViewModel = CompareUSDInputViewModel(brlValueHasError: true)
+
+                    expect(mockViewController.invokedShow).to(equal(expectedViewModel))
+                    expect(mockViewController.$invokedShow.count).to(equal(1))
+                }
+            }
+
             context("when it is successful") {
                 beforeEach {
                     let model = ExchangeRate(bid: "3.0")
