@@ -80,6 +80,7 @@
 		607AE0F225EDB925002A7723 /* Numeric+PercentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607AE0F125EDB925002A7723 /* Numeric+PercentTests.swift */; };
 		607AE0FA25EDB938002A7723 /* Numeric+Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607AE0F925EDB938002A7723 /* Numeric+Percent.swift */; };
 		609169C624F600CA0074D1F0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609169C524F600CA0074D1F0 /* NetworkError.swift */; };
+		609B6FA927F7AD5B006AF5B9 /* ComparaUSDInputDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B6FA827F7AD5B006AF5B9 /* ComparaUSDInputDelegateMock.swift */; };
 		60AEBA5625EDC3E7002060E7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AEBA5525EDC3E7002060E7 /* Button.swift */; };
 		60AEBA6425EDC481002060E7 /* ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AEBA5C25EDC464002060E7 /* ButtonTests.swift */; };
 		60C513B627F7A4F5005E0463 /* CompareUSDInputIntegratedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C513B527F7A4F5005E0463 /* CompareUSDInputIntegratedTests.swift */; };
@@ -210,6 +211,7 @@
 		607AE0F125EDB925002A7723 /* Numeric+PercentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+PercentTests.swift"; sourceTree = "<group>"; };
 		607AE0F925EDB938002A7723 /* Numeric+Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Percent.swift"; sourceTree = "<group>"; };
 		609169C524F600CA0074D1F0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		609B6FA827F7AD5B006AF5B9 /* ComparaUSDInputDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparaUSDInputDelegateMock.swift; sourceTree = "<group>"; };
 		60AEBA5525EDC3E7002060E7 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		60AEBA5C25EDC464002060E7 /* ButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTests.swift; sourceTree = "<group>"; };
 		60C513B527F7A4F5005E0463 /* CompareUSDInputIntegratedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareUSDInputIntegratedTests.swift; sourceTree = "<group>"; };
@@ -744,6 +746,7 @@
 		60EE585A25EB5134004E8763 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				609B6FA827F7AD5B006AF5B9 /* ComparaUSDInputDelegateMock.swift */,
 				6078B7EA25EC69DA002D23D1 /* CompareUSDInputPresenterMock.swift */,
 				60EE582425EB2DD7004E8763 /* CompareUSDInputViewControllerMock.swift */,
 				6078B7E525EC69D2002D23D1 /* CompareUSDInputViewMock.swift */,
@@ -1280,6 +1283,7 @@
 				60176EE32509A20600B0C4C6 /* ReusableViewTests.swift in Sources */,
 				603B147124F8A69C00A6284D /* ImagesTests.swift in Sources */,
 				60176EE62509A33F00B0C4C6 /* UITableViewCell+ReusableViewTests.swift in Sources */,
+				609B6FA927F7AD5B006AF5B9 /* ComparaUSDInputDelegateMock.swift in Sources */,
 				60D5B8F3274A122A00B6449F /* NSMutableAttributedString+BuilderTests.swift in Sources */,
 				60D5B8E8274A109D00B6449F /* String+RangeTests.swift in Sources */,
 			);

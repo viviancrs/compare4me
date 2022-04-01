@@ -1,6 +1,6 @@
 import UIKit
 
-protocol CompareUSDInputViewControllerDelegate: AnyObject {
+protocol CompareUSDInputDelegate: AnyObject {
     func showResult(from data: CompareUSD)
 }
 
@@ -11,7 +11,7 @@ protocol CompareUSDInputViewControllerType: AnyObject {
 }
 
 class CompareUSDInputViewController: UIViewController {
-    weak var delegate: CompareUSDInputViewControllerDelegate?
+    weak var delegate: CompareUSDInputDelegate?
 
     private var presenter: CompareUSDInputPresenterType
     private let mainView: CompareUSDInputViewType

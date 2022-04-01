@@ -8,12 +8,15 @@ class CompareUSDInputViewControllerTests: QuickSpec {
         var sut: CompareUSDInputViewController!
         var mockPresenter: CompareUSDInputPresenterMock!
         var mockView: CompareUSDInputViewMock!
+        var mockDelegate: CompareUSDInputDelegateMock!
 
         beforeEach {
             mockPresenter = CompareUSDInputPresenterMock()
             mockView = CompareUSDInputViewMock()
+            mockDelegate = CompareUSDInputDelegateMock()
 
             sut = CompareUSDInputViewController(presenter: mockPresenter, view: mockView)
+            sut.delegate = mockDelegate
         }
 
         describe("#initWithDecode") {
@@ -43,6 +46,16 @@ class CompareUSDInputViewControllerTests: QuickSpec {
 
                 expect(mockView.invokedShow).toEventually(equal(viewModel))
                 expect(mockView.$invokedShow.count).toEventually(equal(1))
+            }
+        }
+
+        describe("#showResult") {
+            it("calls view show with expected model") {
+                let data = CompareUSD(usdValue: 100, brlValue: 200, usdExchangeRate: 300)
+                sut.showResult(from: data)
+
+                expect(mockDelegate.invokedShowResult).toEventually(equal(data))
+                expect(mockDelegate.$invokedShowResult.count).toEventually(equal(1))
             }
         }
     }

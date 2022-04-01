@@ -27,7 +27,7 @@ class CompareUSDCoordinator: Coordinator {
     }
 }
 
-extension CompareUSDCoordinator: CompareUSDInputViewControllerDelegate {
+extension CompareUSDCoordinator: CompareUSDInputDelegate {
     func showResult(from data: CompareUSD) {
         let vc = createResultViewController(data: data)
 
