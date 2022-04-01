@@ -7,16 +7,12 @@ class CompareUSDResultIntegratedTests: QuickSpec {
     override func spec() {
         var sut: CompareUSDResultViewController!
         var presenter: CompareUSDResultPresenter!
-        var view: CompareUSDResultView!
 
         beforeEach {
-            let data = CompareUSD(usdValue: 2800, brlValue: 20000, usdExchangeRate: 5.37)
+            let data = CompareUSD(usdValue: 280, brlValue: 990, usdExchangeRate: 4.79)
             presenter = CompareUSDResultPresenter(data: data)
 
-            view = CompareUSDResultView()
-
-            sut = CompareUSDResultViewController(presenter: presenter, view: view)
-            _ = sut.view
+            sut = CompareUSDResultViewController(presenter: presenter)
         }
 
         describe("#initWithDecode") {
@@ -25,11 +21,9 @@ class CompareUSDResultIntegratedTests: QuickSpec {
             }
         }
 
-        describe("#show") {
+        describe("#viewDidLoad") {
             beforeEach {
-                let section = CompareUSDResultSectionViewModel(title: "", items: [])
-                let viewModel = CompareUSDResultViewModel(valuesInBrasil: section, importValues: section)
-                sut.show(viewModel: viewModel)
+                _ = sut.view
             }
 
             it("has expected snapshot") {

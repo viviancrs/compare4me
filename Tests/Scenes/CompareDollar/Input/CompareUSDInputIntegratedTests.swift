@@ -7,13 +7,11 @@ class CompareUSDInputIntegratedTests: QuickSpec {
     override func spec() {
         var sut: CompareUSDInputViewController!
         var presenter: CompareUSDInputPresenter!
-        var view: CompareUSDInputView!
 
         beforeEach {
             presenter = CompareUSDInputPresenter()
-            view = CompareUSDInputView()
 
-            sut = CompareUSDInputViewController(presenter: presenter, view: view)
+            sut = CompareUSDInputViewController(presenter: presenter)
         }
 
         describe("#viewDidLoad") {

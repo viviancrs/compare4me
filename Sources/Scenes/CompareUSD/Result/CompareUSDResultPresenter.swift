@@ -23,11 +23,8 @@ class CompareUSDResultPresenter {
     }
 
     private func calculateValuesInBrazil() -> CompareUSDResultSectionViewModel {
-        let brlByUSD = data.brlValue / data.usdValue
-
         var items = [CompareUSDResultSectionViewModel.Item]()
         items.append(.init(title: AppStrings.total.localized, value: data.brlValue.currency(locale: .ptBR)))
-        items.append(.init(title: AppStrings.brlByUSD.localized, value: brlByUSD.currency(locale: .ptBR)))
 
         let valuesInBrazil = CompareUSDResultSectionViewModel(title: AppStrings.priceInBrazil.localized,
                                                               items: items)
@@ -36,12 +33,12 @@ class CompareUSDResultPresenter {
 
     private func calculateImportValues() -> CompareUSDResultSectionViewModel {
         let total = data.usdValue * (tax + 1) * data.usdExchangeRate * (iof + 1)
-        let brlByUSD = total / data.usdValue
+        let exchangeRate = total / data.usdValue
 
         var items = [CompareUSDResultSectionViewModel.Item]()
         items.append(.init(title: AppStrings.total.localized, value: total.currency(locale: .ptBR)))
         items.append(.init(title: AppStrings.priceInTheUSA.localized, value: data.usdValue.currency(locale: .enUS)))
-        items.append(.init(title: AppStrings.exchangeRate.localized, value: brlByUSD.currency(locale: .ptBR)))
+        items.append(.init(title: AppStrings.exchangeRate.localized, value: exchangeRate.currency(locale: .ptBR)))
         items.append(.init(title: AppStrings.importTax.localized, value: tax.percent(locale: .ptBR)))
         items.append(.init(title: AppStrings.iof.localized, value: iof.percent(locale: .ptBR)))
 
