@@ -1,6 +1,6 @@
 import UIKit
 
-protocol Keyboardable: class {
+protocol Keyboardable: AnyObject {
     var notificationCenter: NotificationCenterType { get set }
 
     func addKeyboardObservers()
