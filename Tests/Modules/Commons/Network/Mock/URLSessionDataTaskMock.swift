@@ -1,13 +1,6 @@
 import Foundation
+@testable import Compare4Me
 
-class URLSessionDataTaskMock: URLSessionDataTask {
-    private let closure: () -> Void
-
-    init(closure: @escaping () -> Void) {
-        self.closure = closure
-    }
-
-    override func resume() {
-        closure()
-    }
+struct URLSessionDataTaskMock: URLSessionDataTaskType {
+    func resume() { }
 }

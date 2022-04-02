@@ -6,9 +6,9 @@ protocol HTTPClientType {
 
 struct HTTPClient: HTTPClientType {
 
-    private let session: URLSession
+    private let session: URLSessionType
 
-    init(session: URLSession = URLSession(configuration: .default)) {
+    init(session: URLSessionType = URLSession(configuration: .default)) {
         self.session = session
     }
 

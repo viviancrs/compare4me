@@ -8,7 +8,6 @@ target 'Compare4Me' do
     pod 'Quick', '~> 4.0.0'
     pod 'Nimble', '~> 9.2.1'
     pod 'SnapshotTesting', '~> 1.9.0'
-    pod 'OHHTTPStubs/Swift', '~> 9.1.0'
   end
 
   target 'Compare4MeUITests' do

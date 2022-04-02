@@ -1,6 +1,7 @@
 import Foundation
+@testable import Compare4Me
 
-class URLSessionMock: URLSession {
+class URLSessionMock: URLSessionType {
     typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
 
     @Spy var invokedDataTask: URLRequest?
@@ -9,15 +10,13 @@ class URLSessionMock: URLSession {
     var mockError: Error?
     var mockStatusCode: Int = 500
 
-    override func dataTask(with request: URLRequest,
-                           completionHandler: @escaping CompletionHandler) -> URLSessionDataTask {
+    func dataTask(with request: URLRequest, completionHandler: @escaping CompletionHandler) -> URLSessionDataTaskType {
 
         invokedDataTask = request
         let url = URL(string: "http://www.example.com")!
         let response = HTTPURLResponse(url: url, statusCode: mockStatusCode, httpVersion: nil, headerFields: nil)
 
-        return URLSessionDataTaskMock {
-            completionHandler(self.mockData, response, self.mockError)
-        }
+        completionHandler(self.mockData, response, self.mockError)
+        return URLSessionDataTaskMock()
     }
 }

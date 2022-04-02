@@ -9,7 +9,7 @@ class HTTPClientTests: QuickSpec {
         var mockURLSession: URLSessionMock!
 
         beforeEach {
-            mockURLSession = URLSessionMock() // TODO - refazer estatégia de mock
+            mockURLSession = URLSessionMock()
 
             sut = HTTPClient(session: mockURLSession)
         }
